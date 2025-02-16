@@ -9,6 +9,10 @@ function test() {
     console.log("test");
 }
 
-module.exports = people;
-// return module.exports    ;
+module.exports = {
+    people: people,
+    a: a,
+    test: test
+};
+// return module.exports;
 // }); 

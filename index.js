@@ -1,3 +1,4 @@
-const people = require('./index2');
+const data = require('./index2');
 
-console.log(people);
+console.log(data.people);
+data.test();
