@@ -1,7 +1,6 @@
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const EventEmitter = require('events');
 const myPath = 'D:/Web Development/node.js/index3.js';
 
 // console.log(path.basename(myPath));
@@ -23,14 +22,13 @@ const myPath = 'D:/Web Development/node.js/index3.js';
 //     console.log(data.toString());
 // });
 
-const emitter = new EventEmitter();
+
+const School = require('./school');
+const school = new School();
 
 // register a listener for bellRing event
-emitter.on('bellRing', (period) => {
+school.on('bellRing', (period) => {
     console.log(`ring ring ring, ${period}`);
 });
 
-// raise an event
-setTimeout(() => {
-    emitter.emit('bellRing', 'second period is over');
-}, 2000);
+school.startPeriod();
